@@ -1,0 +1,253 @@
+<!doctype html>
+
+<html lang="en">
+<link rel="icon" type="image/png" href="favicon.png">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#09080c" />
+  <title>hammy.top</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .cat-photo img {
+      cursor: pointer;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      cursor: zoom-out;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: min(95vw, 1400px);
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 14px;
+      box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
+      cursor: default;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 24px;
+      border: 0;
+      background: transparent;
+      color: white;
+      font-size: 42px;
+      line-height: 1;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.15s ease;
+    }
+
+    .lightbox-close:hover {
+      opacity: 1;
+    }
+
+    body.lightbox-open {
+      overflow: hidden;
+    }
+  </style>
+
+</head>
+<body>
+  <main class="page">
+    <section class="hero" aria-label="About me">
+      <div class="left">
+        <p class="intro">
+          hi, my name is hammy<br>
+          <span>(or at least that's what i go by)</span>
+        </p>
+
+    <p class="bio">
+      i mess with computers, hardware, linux, and random tech projects.
+      my days are spent mostly just gaming, or messing with my pc (yes my life is very boring i know).
+    </p>
+
+    <section class="links-section">
+      <h2>socials:</h2>
+      <div class="links">
+        <a href="#" rel="me">instagram</a>
+        <a href="#">discord</a>
+        <a href="#">xitter</a>
+      </div>
+    </section>
+    <section class="links-section projects">
+      <h2>project(s) 👀</h2>
+      <a href="https://bo3.hammy.top/" target="_blank" rel="noopener noreferrer">BO3 Client Manager</a>
+    </section>
+    <section class="links-section">
+      <h2>favorite games:</h2>
+      <div class="stacked-list">
+        <span>Call of Duty (the entire franchise)</span>
+        <span>Battlefield</span>
+        <span>Arc Raiders</span>
+        <span>Minecraft</span>
+        <span>Rocket League</span>
+      </div>
+    </section>
+
+    <section class="links-section">
+      <h2>tv shows i watch:</h2>
+      <div class="stacked-list">
+        <span>The Rookie</span>
+        <span>Ted Lasso</span>
+      </div>
+    </section>
+
+    <section class="links-section">
+      <h2>favorite artists:</h2>
+      <div class="stacked-list">
+        <span>Bad Bunny</span>
+        <span>bbno$</span>
+        <span>Morad</span>
+        <span>Kevin Sherwood (and the rest of Treyarch Sound)</span>
+      </div>
+    </section>
+<section class="links-section">
+  <h2>pc:</h2>
+  <div class="stacked-list">
+    <span>i5-10500</span>
+    <span>GTX 1070</span>
+    <span>16GB DDR4</span>
+    <span>x1 512GB NVMe</span>
+    <span>x2 128GB SATA III SSDs (RAID 0 array)</span>
+    <span>Windows 11 Enterprise (AtlasOS)</span>
+  </div>
+</section>
+<section class="links-section">
+  <h2>phone:</h2>
+  <div class="stacked-list">
+    <span>Samsung Galaxy S10+</span>
+    <span>Running EvolutionX</span>
+  </div>
+</section>
+    <section class="cats-section" aria-label="Cats">
+      <h2>cats:</h2>
+
+      <div class="cat-group">
+        <h3>Aylool</h3>
+        <div class="cat-gallery">
+          <figure class="cat-photo">
+            <img src="cats/aylool-1.jpg" alt="Aylool photo 1">
+            <figcaption>aylool-1.jpg</figcaption>
+          </figure>
+
+          <figure class="cat-photo">
+            <img src="cats/aylool-2.jpg" alt="Aylool photo 2">
+            <figcaption>aylool-2.jpg</figcaption>
+          </figure>
+
+          <figure class="cat-photo">
+            <img src="cats/aylool-3.jpg" alt="Aylool photo 3">
+            <figcaption>aylool-3.jpg</figcaption>
+          </figure>
+
+          <figure class="cat-photo">
+            <img src="cats/aylool-4.jpg" alt="Aylool photo 4">
+            <figcaption>aylool-4.jpg</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="cat-group">
+        <h3>Luna</h3>
+        <div class="cat-gallery">
+          <figure class="cat-photo">
+            <img src="cats/luna-1.jpg" alt="Luna photo 1">
+            <figcaption>luna-1.jpg</figcaption>
+          </figure>
+
+          <figure class="cat-photo">
+            <img src="cats/luna-2.jpg" alt="Luna photo 2">
+            <figcaption>luna-2.jpg</figcaption>
+          </figure>
+
+          <figure class="cat-photo">
+            <img src="cats/luna-3.jpg" alt="Luna photo 3">
+            <figcaption>luna-3.jpg</figcaption>
+          </figure>
+
+          <figure class="cat-photo">
+            <img src="cats/luna-4.jpg" alt="Luna photo 4">
+            <figcaption>luna-4.jpg</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="meow" aria-label="meow">meow</div>
+
+    <p class="disclaimer">i vibe coded this I'M SORRY I DON'T KNOW HTML 😭</p>
+  </div>
+
+  <div class="right">
+    <div class="pfp-frame">
+      <img src="pfp.jpg" alt="hammy's pfp" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+      <div class="pfp-fallback" aria-hidden="true">pfp</div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">&times;</button>
+    <img id="lightboxImage" src="" alt="">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    document.querySelectorAll(".cat-photo img").forEach((image) => {
+      image.addEventListener("click", () => {
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("lightbox-open");
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove("active");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("lightbox-open");
+      lightboxImage.src = "";
+    }
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && lightbox.classList.contains("active")) {
+        closeLightbox();
+      }
+    });
+  </script>
+
+</body>
+</html>
